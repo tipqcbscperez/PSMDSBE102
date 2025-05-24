@@ -1,3 +1,12 @@
+# Course Information
+
+In partial fulfillment of PSMDSBE 102-PSMDS12G2 - Special Topics in Data Science - ML OPs
+
+# Contact Information
+
+Made by Butch Perez
+Contact via qbscperez@tip.edu.ph
+
 # Telco Customer Churn Prediction
 
 This project uses the Telco Customer Churn dataset (from Kaggle) to predict churn using a Random Forest classifier, with support for hyperparameter tuning (Ray Tune), experiment tracking (MLflow), and real-time serving (FastAPI).
@@ -23,7 +32,7 @@ This project uses the Telco Customer Churn dataset (from Kaggle) to predict chur
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 ```bash
 pip install -r requirements.txt
@@ -39,7 +48,7 @@ Suggested packages:
 
 ---
 
-## 🚀 Training the Model
+## Training the Model
 
 ```bash
 python train.py --n-estimators 100 --max-depth 10 --save-local
@@ -49,7 +58,7 @@ Logs metrics and model artifacts to MLflow.
 
 ---
 
-## 🔍 Hyperparameter Tuning with Ray
+## Hyperparameter Tuning with Ray
 
 ```bash
 python tune.py
@@ -59,7 +68,7 @@ Uses Ray Tune with ASHA scheduler to optimize model performance.
 
 ---
 
-## 🔮 Running Predictions
+## Running Predictions
 
 ```bash
 python predict.py \
@@ -69,7 +78,7 @@ python predict.py \
 
 ---
 
-## 🌐 Serving the Model
+## Serving the Model
 
 ```bash
 uvicorn serve:app --reload
@@ -92,7 +101,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 ---
 
-## 📁 MLflow Tracking
+## MLflow Tracking
 
 Set your MLflow URI in `config.py`. Launch the UI with:
 
@@ -104,7 +113,7 @@ Then visit `http://localhost:5000` to explore runs and metrics.
 
 ---
 
-## 📌 Notes
+## Notes
 
 * Assumes the dataset follows the structure of the Kaggle Telco dataset.
 * Requires `data/preprocess_data()` to match the training pipeline.
@@ -112,12 +121,12 @@ Then visit `http://localhost:5000` to explore runs and metrics.
 
 ---
 
-## ✅ TODOs
+## TODOs
 
 * Make it work.
 
 ---
 
-## 📜 License
+## License
 
 MIT License.
